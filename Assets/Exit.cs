@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class Exit : MonoBehaviour
 {
-    public GameObject gemGreen;
+    public GameObject gem;
     public GameObject background;
     public string teleportDestination;
 
     private void OnTriggerEnter(Collider other)
     {
-        if (gemGreen.activeInHierarchy == false)
+        if (gem.activeInHierarchy == false)
         {
             background.GetComponent<GameManager>().TeleportOpen(teleportDestination);
         }
